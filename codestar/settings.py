@@ -7,10 +7,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
-import dj_database_url
+from pathlib import Path
 from django.contrib.messages import constants as messages
+import dj_database_url
 if os.path.isfile("env.py"):
     import env
 
@@ -28,9 +28,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
-
 ALLOWED_HOSTS = ["codestar20231.herokuapp.com", "localhost"]
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Application definition
 
@@ -56,7 +56,6 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-
 
 MESSAGE_TAGS = {
         messages.DEBUG: 'alert-info',
